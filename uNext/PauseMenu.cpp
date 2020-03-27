@@ -8,13 +8,14 @@ PauseMenu::PauseMenu(void) {
 	rPause.x = 220;
 	rPause.y = 140;
 	rPause.w = 360;
-	rPause.h = 142;
+	rPause.h = 170;
 
 	this->lMO.push_back(new MenuOption("RESUME", 0, 156));
 	this->lMO.push_back(new MenuOption("OPTIONS", 0, 180));
+	this->lMO.push_back(new MenuOption(CCore::isBotPlayer ? "KEYBOARD PLAYER" : "BOT PLAYER", 0, 204));
 
-	this->lMO.push_back(new MenuOption("QUIT TO MENU", 0, 228));
-	this->lMO.push_back(new MenuOption("QUIT TO DESKTOP", 0, 252));
+	this->lMO.push_back(new MenuOption("QUIT TO MENU", 0, 248));
+	this->lMO.push_back(new MenuOption("QUIT TO DESKTOP", 0, 272));
 
 	this->numOfMenuOptions = lMO.size();
 }
@@ -71,10 +72,14 @@ void PauseMenu::enter() {
 			CCFG::getMM()->setViewID(CCFG::getMM()->eOptions);
 			break;
 		case 2:
+			CCore::isBotPlayer = !CCore::isBotPlayer;
+			this->lMO[2]->setText(CCore::isBotPlayer ? "KEYBOARD PLAYER" : "BOT PLAYER");
+			break;
+		case 3:
 			CCore::getMap()->resetGameData();
 			CCFG::getMM()->setViewID(CCFG::getMM()->eMainMenu);
 			break;
-		case 3:
+		case 4:
 			CCore::quitGame = true;
 			break;
 	}

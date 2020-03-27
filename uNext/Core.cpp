@@ -13,6 +13,7 @@ bool CCore::mouseRightPressed = false;
 int CCore::mouseX = 0;
 int CCore::mouseY = 0;
 bool CCore::quitGame = false;
+bool CCore::isBotPlayer = false;
 
 bool CCore::movePressed = false;
 bool CCore::keyMenuPressed = false;

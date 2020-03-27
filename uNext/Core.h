@@ -44,6 +44,7 @@ public:
 	~CCore(void);
 
 	static bool quitGame;
+	static bool isBotPlayer;
 
 	void mainLoop();
 
