@@ -7,6 +7,8 @@
 
 class CCore
 {
+	friend class BotPlayer;
+
 private:
 	SDL_Window* window;
 	SDL_Renderer* rR;

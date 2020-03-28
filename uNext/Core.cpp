@@ -3,6 +3,7 @@
 #include "IMG.h"
 #include "CFG.h"
 #include "Text.h"
+#include "BotPlayer.h"
 #include "SDL_mixer.h"
 
 /* ******************************************** */
@@ -87,6 +88,11 @@ void CCore::mainLoop() {
 
 	while(!quitGame && mainEvent->type != SDL_QUIT) {
 		frameTime = SDL_GetTicks();
+
+		if (CCore::isBotPlayer) {
+			BotPlayer::pressKeysUsingBot();
+		}
+
 		SDL_PollEvent(mainEvent);
 		SDL_RenderClear(rR);
 

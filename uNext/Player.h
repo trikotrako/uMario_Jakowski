@@ -10,6 +10,8 @@
 
 class Player
 {
+	friend class BotPlayer;
+
 private:
 	std::vector<Sprite*> sMario;
 	int iSpriteID;

@@ -15,6 +15,7 @@
     <ClCompile Include="Beetle.cpp" />
     <ClCompile Include="Block.cpp" />
     <ClCompile Include="BlockDebris.cpp" />
+    <ClCompile Include="BotPlayer.cpp" />
     <ClCompile Include="Bowser.cpp" />
     <ClCompile Include="Bubble.cpp" />
     <ClCompile Include="BulletBill.cpp" />
@@ -73,6 +74,7 @@
     <ClInclude Include="Beetle.h" />
     <ClInclude Include="Block.h" />
     <ClInclude Include="BlockDebris.h" />
+    <ClInclude Include="BotPlayer.h" />
     <ClInclude Include="Bowser.h" />
     <ClInclude Include="Bubble.h" />
     <ClInclude Include="BulletBill.h" />
