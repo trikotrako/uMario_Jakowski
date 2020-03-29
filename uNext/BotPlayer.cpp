@@ -56,7 +56,7 @@ void BotPlayer::pressKeysUsingBot()
 		break;
 	case Move::JUMP:
 		// we want to get to jumpState==2, by pressing space for a long period of time.
-		if (2 > CCore::getMap()->getPlayer()->jumpState && !CCFG::keySpace) {
+		if (HIGH_JUMP_STATE > CCore::getMap()->getPlayer()->jumpState && !CCFG::keySpace) {
 			BotKeyUtils::pressKey(CCFG::keyIDSpace);
 		}
 	case Move::NOTHING:

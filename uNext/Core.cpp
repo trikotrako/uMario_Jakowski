@@ -14,7 +14,7 @@ bool CCore::mouseRightPressed = false;
 int CCore::mouseX = 0;
 int CCore::mouseY = 0;
 bool CCore::quitGame = false;
-bool CCore::isBotPlayer = true;
+bool CCore::isBotPlayer = false;
 
 BotPlayer* CCore::botPlayer = new BotPlayer();
 
