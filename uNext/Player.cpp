@@ -388,7 +388,7 @@ void Player::playerPhysics() {
 				currentJumpSpeed = 2.5f;
 			}
 
-			if(!CCFG::keySpace && currentJumpDistance > 64 && !springJump) {
+			if((!CCFG::keySpace && !CCFG::keyJ) && currentJumpDistance > 64 && !springJump) {
 				jumpDistance = 16;
 				currentJumpDistance = 0;
 				currentJumpSpeed = 2.5f;

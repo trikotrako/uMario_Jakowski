@@ -231,6 +231,10 @@ void CCore::InputPlayer() {
 			if(mainEvent->key.keysym.sym == CCFG::keyIDSpace) {
 				CCFG::keySpace = false;
 			}
+
+			if (mainEvent->key.keysym.sym == SDLK_j) {
+				CCFG::keyJ = false;
+			}
 		
 			if(mainEvent->key.keysym.sym == CCFG::keyIDShift) {
 				if(keyShift) {
@@ -278,6 +282,15 @@ void CCore::InputPlayer() {
 			if(!keyShift) {
 				oMap->getPlayer()->startRun();
 				keyShift = true;
+			}
+		}
+
+		if (mainEvent->key.keysym.sym == SDLK_j) {
+			if (!CCFG::keyJ) {
+				if (!CCore::getMap()->getUnderWater() && CCore::getMap()->getPlayer()->getJumpState() == 0) {
+					oMap->getPlayer()->startJump(8);
+				}
+				CCFG::keyJ = true;
 			}
 		}
 

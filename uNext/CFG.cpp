@@ -22,6 +22,7 @@ MenuManager* CCFG::oMM = new MenuManager();
 Music* CCFG::oMusic = new Music();
 
 bool CCFG::keySpace = false;
+bool CCFG::keyJ = false;
 
 int CCFG::keyIDA = 0;
 int CCFG::keyIDD = 0;
