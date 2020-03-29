@@ -14,7 +14,9 @@ bool CCore::mouseRightPressed = false;
 int CCore::mouseX = 0;
 int CCore::mouseY = 0;
 bool CCore::quitGame = false;
-bool CCore::isBotPlayer = false;
+bool CCore::isBotPlayer = true;
+
+BotPlayer* CCore::botPlayer = new BotPlayer();
 
 bool CCore::movePressed = false;
 bool CCore::keyMenuPressed = false;
@@ -90,7 +92,7 @@ void CCore::mainLoop() {
 		frameTime = SDL_GetTicks();
 
 		if (CCore::isBotPlayer) {
-			BotPlayer::pressKeysUsingBot();
+			botPlayer->pressKeysUsingBot();
 		}
 
 		SDL_PollEvent(mainEvent);

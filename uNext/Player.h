@@ -11,6 +11,8 @@
 class Player
 {
 	friend class BotPlayer;
+	friend class BotKeyUtils;
+	friend class BotMapUtils;
 
 private:
 	std::vector<Sprite*> sMario;

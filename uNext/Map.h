@@ -48,6 +48,8 @@
 
 class Map
 {
+	friend class BotMapUtils;
+
 private:
 	float fXPos, fYPos;
 

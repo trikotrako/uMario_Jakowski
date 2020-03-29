@@ -15,6 +15,8 @@
     <ClCompile Include="Beetle.cpp" />
     <ClCompile Include="Block.cpp" />
     <ClCompile Include="BlockDebris.cpp" />
+    <ClCompile Include="BotKeyUtils.cpp" />
+    <ClCompile Include="BotMapUtils.cpp" />
     <ClCompile Include="BotPlayer.cpp" />
     <ClCompile Include="Bowser.cpp" />
     <ClCompile Include="Bubble.cpp" />
@@ -74,6 +76,8 @@
     <ClInclude Include="Beetle.h" />
     <ClInclude Include="Block.h" />
     <ClInclude Include="BlockDebris.h" />
+    <ClInclude Include="BotKeyUtils.h" />
+    <ClInclude Include="BotMapUtils.h" />
     <ClInclude Include="BotPlayer.h" />
     <ClInclude Include="Bowser.h" />
     <ClInclude Include="Bubble.h" />

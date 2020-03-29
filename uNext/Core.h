@@ -8,6 +8,7 @@
 class CCore
 {
 	friend class BotPlayer;
+	friend class BotKeyUtils;
 
 private:
 	SDL_Window* window;
@@ -47,6 +48,8 @@ public:
 
 	static bool quitGame;
 	static bool isBotPlayer;
+
+	static BotPlayer* botPlayer;
 
 	void mainLoop();
 
